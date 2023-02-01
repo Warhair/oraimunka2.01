@@ -33,20 +33,22 @@ def jatekos_vesztett_teszt():
     gep = [3, 5, 6, 4]
     kapott = eredmény(jatekos, gep)
     vart = "Játékos vesztett"
+    print("játékos vesztett")
     if kapott == vart:
         print("Teszt sikeres")
     else:
-        print("teszt megbukott")
+        print("Teszt megbukott")
 
 def gep_vesztett_teszt():
     jatekos = [7, 8, 3]
     gep = [3, 5, 6, 10]
     kapott = eredmény(jatekos, gep)
     vart = "Gép vesztett"
+    print("Gép vesztett")
     if kapott == vart:
         print("Teszt sikeres")
     else:
-        print("teszt megbukott")
+        print("Teszt megbukott")
 
 
 def dontetlen_teszt():
@@ -54,6 +56,7 @@ def dontetlen_teszt():
     gep = [3, 5, 6, 10]
     kapott = eredmény(jatekos, gep)
     vart = "Döntetlen"
+    print("Döntetlen")
     if kapott == vart:
         print("Teszt sikeres")
     else:
