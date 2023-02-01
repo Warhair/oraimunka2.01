@@ -16,20 +16,49 @@ def eredmény(jatekos: list, gep: list):
         return eredmeny
 
     elif osszegzes(jatekos) > 21:
-        eredmeny = "játékos vesztet"
+        eredmeny = "Játékos vesztett"
         return eredmeny
 
     elif osszegzes(gep) > 21:
-        eredmeny = "Gép vesztet"
+        eredmeny = "Gép vesztett"
         return eredmeny
 
 #Tesztek
 def testek():
     jatekos_vesztett_teszt()
+    gep_vesztett_teszt()
+    dontetlen_teszt()
 def jatekos_vesztett_teszt():
     jatekos = [7, 8, 9]
     gep = [3, 5, 6, 4]
-    print(eredmény(jatekos, gep))
+    kapott = eredmény(jatekos, gep)
+    vart = "Játékos vesztett"
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
+def gep_vesztett_teszt():
+    jatekos = [7, 8, 3]
+    gep = [3, 5, 6, 10]
+    kapott = eredmény(jatekos, gep)
+    vart = "Gép vesztett"
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
+
+def dontetlen_teszt():
+    jatekos = [7, 8, 10]
+    gep = [3, 5, 6, 10]
+    kapott = eredmény(jatekos, gep)
+    vart = "Döntetlen"
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
 
 
 testek()
