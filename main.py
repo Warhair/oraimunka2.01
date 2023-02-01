@@ -1,6 +1,6 @@
-'Megoldás'
-jatekos = [1,2,3]
-gep = [4,5,6,7,7]
+#Megoldás
+jatekos = [3,4,5,6,7]
+gep = []
 
 def osszegzes(lapok):
     osszeg = 0
@@ -11,12 +11,18 @@ def osszegzes(lapok):
 
 
 def eredmény(jatekos: list, gep: list):
+    eredmeny = ""
     if osszegzes(jatekos) > 21 and osszegzes(gep) > 21:
-        print("Döntetlen")
-    elif osszegzes(jatekos) > 21:
-        print("játékos vesztet")
-    elif osszegzes(gep) > 21:
-        print("Gép vesztet")
+        eredmeny = "Döntetlen"
+        return eredmeny
 
-'Tesztek'
+    elif osszegzes(jatekos) > 21:
+        eredmeny = "játékos vesztet"
+        return eredmeny
+
+    elif osszegzes(gep) > 21:
+        eredmeny = "Gép vesztet"
+        return eredmeny
+
+#Tesztek
 
