@@ -10,15 +10,13 @@ def osszegzes(lapok):
     return osszeg
 
 
-def eredmény(jatekos, gep):
-    if jatekos > 21 and gep > 21:
+def eredmény(jatekos: list, gep: list):
+    if osszegzes(jatekos) > 21 and osszegzes(gep) > 21:
         print("Döntetlen")
-    elif jatekos > 21:
+    elif osszegzes(jatekos) > 21:
         print("játékos vesztet")
-    elif gep >21:
+    elif osszegzes(gep) > 21:
         print("Gép vesztet")
 
 'Tesztek'
-jatekososz = osszegzes(jatekos)
-gepo = osszegzes(gep)
-eredmény(jatekososz, gepo)
+
