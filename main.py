@@ -24,4 +24,12 @@ def eredmény(jatekos: list, gep: list):
         return eredmeny
 
 #Tesztek
+def testek():
+    jatekos_vesztett_teszt()
+def jatekos_vesztett_teszt():
+    jatekos = [7, 8, 9]
+    gep = [3, 5, 6, 4]
+    print(eredmény(jatekos, gep))
 
+
+testek()
