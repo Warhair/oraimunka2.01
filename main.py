@@ -12,12 +12,14 @@ def osszegzes(lapok):
 def eredmény(jatekos: list, gep: list):
     jlp = len(jatekos)
     glp = len(gep)
+    jeredmeny = osszegzes(jatekos)
+    geredmeny = osszegzes(gep)
     eredmeny = ""
-    if osszegzes(jatekos) <= 21 and osszegzes(gep) <= 21:
-        if osszegzes(jatekos) > osszegzes(gep):
+    if jeredmeny <= 21 and geredmeny <= 21:
+        if jeredmeny > geredmeny:
             eredmeny = "Játékos nyert"
             return eredmeny
-        elif osszegzes(gep) > osszegzes(jatekos):
+        elif geredmeny > jeredmeny:
             eredmeny = "Gép nyert"
             return eredmeny
         else:
@@ -30,15 +32,15 @@ def eredmény(jatekos: list, gep: list):
             else:
                 eredmeny = "Döntetlen"
                 return eredmeny
-    elif osszegzes(jatekos) > 21 and osszegzes(gep) > 21:
+    elif jeredmeny > 21 and geredmeny > 21:
         eredmeny = "Döntetlen"
         return eredmeny
 
-    elif osszegzes(jatekos) > 21:
+    elif jeredmeny > 21:
         eredmeny = "Játékos vesztett"
         return eredmeny
 
-    elif osszegzes(gep) > 21:
+    elif geredmeny > 21:
         eredmeny = "Gép vesztett"
         return eredmeny
 
