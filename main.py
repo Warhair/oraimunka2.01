@@ -60,7 +60,7 @@ def dontetlen_mindaketten_vesztet_teszt():
     gep = [3, 5, 6, 10]
     kapott = eredmény(jatekos, gep)
     vart = "Döntetlen"
-    print("Döntetlen")
+    print("Döntetlen mind a ketten veszített")
     if kapott == vart:
         print("Teszt sikeres")
     else:
