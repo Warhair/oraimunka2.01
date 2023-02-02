@@ -32,8 +32,8 @@ def eredmény(jatekos: list, gep: list):
             else:
                 eredmeny = "Döntetlen"
                 return eredmeny
-            
-    if jeredmeny > 21 and geredmeny > 21:
+
+    elif jeredmeny > 21 and geredmeny > 21:
         eredmeny = "Döntetlen"
         return eredmeny
 
