@@ -32,15 +32,16 @@ def eredmény(jatekos: list, gep: list):
             else:
                 eredmeny = "Döntetlen"
                 return eredmeny
-    elif jeredmeny > 21 and geredmeny > 21:
+            
+    if jeredmeny > 21 and geredmeny > 21:
         eredmeny = "Döntetlen"
         return eredmeny
 
-    elif jeredmeny > 21:
-        eredmeny = "Játékos vesztett"
-        return eredmeny
+    if jeredmeny > 21:
+            eredmeny = "Játékos vesztett"
+            return eredmeny
 
-    elif geredmeny > 21:
+    if geredmeny > 21:
         eredmeny = "Gép vesztett"
         return eredmeny
 
