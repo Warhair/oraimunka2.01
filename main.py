@@ -10,8 +10,27 @@ def osszegzes(lapok):
 
 
 def eredmény(jatekos: list, gep: list):
+    jlp = len(jatekos)
+    glp = len(gep)
     eredmeny = ""
-    if osszegzes(jatekos) > 21 and osszegzes(gep) > 21:
+    if osszegzes(jatekos) <= 21 and osszegzes(gep) <= 21:
+        if osszegzes(jatekos) > osszegzes(gep):
+            eredmeny = "Játékos nyert"
+            return eredmeny
+        elif osszegzes(gep) > osszegzes(jatekos):
+            eredmeny = "Gép nyert"
+            return eredmeny
+        else:
+            if jlp < glp:
+                eredmeny = "Játékos nyert"
+                return eredmeny
+            elif jlp > glp:
+                eredmeny = "Gép nyert"
+                return eredmeny
+            else:
+                eredmeny = "Döntetlen"
+                return eredmeny
+    elif osszegzes(jatekos) > 21 and osszegzes(gep) > 21:
         eredmeny = "Döntetlen"
         return eredmeny
 
@@ -115,7 +134,7 @@ def dontetlen_eseten_mindaketten_nyert():
     jatekos = [3, 7, 10]
     gep = [10, 5, 5]
     kapott = eredmény(jatekos, gep)
-    vart = "Gép nyert"
+    vart = "Döntetlen"
     print("Döntetlen esetén mind a kettő nyert")
     if kapott == vart:
         print("Teszt sikeres")
