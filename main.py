@@ -32,6 +32,7 @@ def testek():
     kozelebb21gepnyert_teszt()
     dontetlen_eseten_jatekos_nyert_teszt()
     dontetlen_eseten_gep_nyert_teszt()
+    dontetlen_eseten_mindaketten_nyert()
 def jatekos_vesztett_teszt():
     jatekos = [7, 8, 9]
     gep = [3, 5, 6, 4]
@@ -109,4 +110,16 @@ def dontetlen_eseten_gep_nyert_teszt():
         print("Teszt sikeres")
     else:
         print("teszt megbukott")
+
+def dontetlen_eseten_mindaketten_nyert():
+    jatekos = [3, 7, 10]
+    gep = [10, 5, 5]
+    kapott = eredmény(jatekos, gep)
+    vart = "Gép nyert"
+    print("Döntetlen esetén mind a kettő nyert")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
 testek()
