@@ -55,6 +55,13 @@ def testek():
     dontetlen_eseten_jatekos_nyert_teszt()
     dontetlen_eseten_gep_nyert_teszt()
     dontetlen_eseten_mindaketten_nyert()
+    dontetlen_21gyel_mindaketten_nyert()
+    jatekos_21pontal_nyer()
+    gep_21pontal_nyer()
+    jatekos_19pontal_nyer_tobb_lappal()
+    jatekos_19pontal_nyer_kevesebb_lappal()
+    gep_19pontal_nyer_tobb_lappal()
+    gep_19pontal_nyer_kevesebb_lappal()
 def jatekos_vesztett_teszt():
     jatekos = [7, 8, 9]
     gep = [3, 5, 6, 4]
@@ -139,6 +146,81 @@ def dontetlen_eseten_mindaketten_nyert():
     kapott = eredmény(jatekos, gep)
     vart = "Döntetlen"
     print("Döntetlen esetén mind a kettő nyert")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
+def dontetlen_21gyel_mindaketten_nyert():
+    jatekos = [3, 7, 9, 2]
+    gep = [10, 5, 2, 4]
+    kapott = eredmény(jatekos, gep)
+    vart = "Döntetlen"
+    print("Döntetlen esetén mind a kettő nyert")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
+def jatekos_21pontal_nyer():
+    jatekos = [3, 7, 9, 2]
+    gep = [10, 5, 3]
+    kapott = eredmény(jatekos, gep)
+    vart = "Játékos nyert"
+    print("Játékos 21 pontal nyer")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
+def gep_21pontal_nyer():
+    jatekos = [3, 7, 10]
+    gep = [10, 5, 6]
+    kapott = eredmény(jatekos, gep)
+    vart = "Gép nyert"
+    print("Gép 21 pontal nyer")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
+def jatekos_19pontal_nyer_tobb_lappal():
+    jatekos = [3, 6, 10]
+    gep = [10, 8]
+    kapott = eredmény(jatekos, gep)
+    vart = "Játékos nyert"
+    print("Játékos 19 pontal nyer több lappal")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+def jatekos_19pontal_nyer_kevesebb_lappal():
+    jatekos = [10, 9]
+    gep = [10, 3, 5]
+    kapott = eredmény(jatekos, gep)
+    vart = "Játékos nyert"
+    print("Játékos 19 pontal nyer kevesbb lappal")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+
+def gep_19pontal_nyer_tobb_lappal():
+    jatekos = [4, 4, 10]
+    gep = [10, 3, 2, 4]
+    kapott = eredmény(jatekos, gep)
+    vart = "Gép nyert"
+    print("Gép 19 pontal nyer több lappal")
+    if kapott == vart:
+        print("Teszt sikeres")
+    else:
+        print("teszt megbukott")
+def gep_19pontal_nyer_kevesebb_lappal():
+    jatekos = [10, 3, 2, 2]
+    gep = [10, 5, 4]
+    kapott = eredmény(jatekos, gep)
+    vart = "Gép nyert"
+    print("Gép 19 pontal nyer kevesbb lappal")
     if kapott == vart:
         print("Teszt sikeres")
     else:
